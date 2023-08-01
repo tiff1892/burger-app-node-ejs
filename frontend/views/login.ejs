@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/header.ejs'); %>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="home-section">
+        <%- include('./partials/navbar.ejs') %>
+
+        <div class="login-main">
+          I'm the login page. <% for(let value of data){ %>
+          <div style="color: #fff"><%= value %></div>
+          <% } %>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
+      </div>
+    </div>
+  </body>
+</html>
