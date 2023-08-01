@@ -5,15 +5,15 @@ const path = require("path");
 const app = express();
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../frontend/views"));
-app.use("/static", express.static(path.join(__dirname, "../frontend/static")));
+app.set("views", path.join(__dirname, "frontend/views"));
+app.use("/static", express.static(path.join(__dirname, "frontend/static")));
 
 /* Middleware */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 /* ROUTES */
-const appRoute = require("./routes/app");
+const appRoute = require("./backend/routes/app");
 app.use("/", appRoute);
 
 //to RUN
